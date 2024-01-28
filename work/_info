@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/verilog/memory
+vdual_port_ram
+Z1 !s110 1706159253
+!i10b 1
+!s100 85<a;]5hWdR834MlD<1jK3
+IAEeWkgi6aEPbToa2W5ARQ3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1706013205
+8main.v
+Fmain.v
+L0 2
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1706159252.000000
+Z5 !s107 main.v|tb.v|
+Z6 !s90 -reportprogress|300|tb.v|
+!i113 1
+Z7 tCvgOpt 0
+vdual_port_ram_tb
+R1
+!i10b 1
+!s100 BTgGV>6G`dY[Roe3_Qm7N2
+Im8TkG[f95DVahT9z=WVPg3
+R2
+R0
+w1706013643
+8tb.v
+Ftb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
