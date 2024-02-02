@@ -21,10 +21,10 @@ reg [2:0] database [7:0];
 
 always @(posedge clk or posedge reset) begin
 	if(reset==1'b1) begin
-		data_out_A<=8'd0;
-		data_out_B<=8'd0;
+		data_out_A=8'd0;
+		data_out_B=8'd0;
 	end
-	else begin
+	else if(reset==1'b0) begin
 
 		if (address_A<8) begin
 			if (write_enable_A==1'b1 ) begin

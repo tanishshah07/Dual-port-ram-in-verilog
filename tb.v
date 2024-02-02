@@ -36,9 +36,11 @@ initial begin
     write_enable_A = 1;
     write_enable_B = 1;
     data_in_A = 4'hF;
-    data_in_B = 4'h0;
+    data_in_B = 4'hA;
     address_A = 3'b000;
     address_B = 3'b001;
+
+
 
     #10;
     write_enable_A = 0;
@@ -50,14 +52,20 @@ initial begin
     address_A = 5'b00010;
     data_in_A = 4'h5;
     address_B = 3'b011;
-    data_in_B = 4'hA;
+    data_in_B = 4'hB;
   
     #10;
     write_enable_A = 0;
     write_enable_B = 0;
     reset=1;
+   #0.001; 
+    check_reset (data_out_B,data_out_A);
 
+    #20;
+    $stop;
 
+    end
+/*
     #10;
     write_enable_A = 1;
     write_enable_B = 1;
@@ -143,10 +151,25 @@ initial begin
 end
 */
 
+task check_reset(input integer data_out_B,data_out_A);
+ begin
+	
+   $display("%0f data out A %0b",$realtime,data_out_A);
+   $display("%0f data out B %0b",$realtime,data_out_B);
+  if (data_out_A==0 && data_out_B==0) $display("reset is working perfectly");
+   else $display("reset is not working");
+   
+ end
+
+endtask
 
 
 
 initial forever #5 clk=~clk;
+
+
+
+
  
 
 endmodule
